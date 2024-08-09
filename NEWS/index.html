@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto News Aggregator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .news-container {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .news-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+            transition: background-color 0.3s;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        .news-item:hover {
+            background-color: #f9f9f9;
+        }
+        .news-image {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        .news-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .news-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.4em;
+            color: #333;
+        }
+        .news-content p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .news-content a {
+            color: #007bff;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .news-content a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crypto News Aggregator</h1>
+    <div class="news-container" id="news"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多標籤首頁</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <label for="symbol-select">選擇幣種:</label>
+    <select id="symbol-select" onchange="fetchPrices(this.value, 'selected-price', previousSelectedPrice).then(price => previousSelectedPrice = price)">
+        <!-- 動態添加選項 -->
+    </select>
+</div>
+
+<div class="price-bar">
+    <span id="btc-price" class="price"><span class="price-name">BTC/USDT</span>: <span class="price-value">加載中...</span> <span class="price-change"></span></span>
+    <span id="eth-price" class="price"><span class="price-name">ETH/USDT</span>: <span class="price-value">加載中...</span> <span class="price-change"></span></span>
+    <span id="selected-price" class="price"><span class="price-name">選擇的幣種</span>: <span class="price-value">加載中...</span> <span class="price-change"></span></span>
+</div>
+
+<div class="navbar">
+    <a href="javascript:void(0)" onclick="showContent('news')">最新消息</a>
+    <div class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">小工具</a>
+        <div class="dropdown-content">
+            <a href="javascript:void(0)" onclick="openInNewWindow('/Coin-price-alarm/index.html')">幣價漲跌警報器</a>
+            <a href="#">幣價換算器</a>
+        </div>
+    </div>
+    <a href="javascript:void(0)" onclick="showContent('tab2')">標籤2</a>
+    <a href="javascript:void(0)" onclick="showContent('tab3')">標籤3</a>
+    <a href="javascript:void(0)" onclick="showContent('tab4')">標籤4</a>
+</div>
+
+<div id="news" class="content">
+    <!-- 最新消息的內容將通過動態載入插入 -->
+    <iframe src="/NEWS/index.html" frameborder="0" style="width: 100%; height: 100vh;"></iframe>
+</div>
+<div id="tab1" class="content hidden">
+    <h1>小工具內容</h1>
+    <!-- 這裡插入您的小工具內容 -->
+    <p>這是小工具的內容。這裡可以包含更多的HTML結構，例如圖片、表格等。</p>
+</div>
+<div id="tab2" class="content hidden">
+    <h1>標籤2內容</h1>
+    <!-- 這裡插入您的標籤2內容 -->
+    <p>這是標籤2的內容。這裡可以包含更多的HTML結構，例如圖片、表格等。</p>
+</div>
+<div id="tab3" class="content hidden">
+    <h1>標籤3內容</h1>
+    <!-- 這裡插入您的標籤3內容 -->
+    <p>這是標籤3的內容。這裡可以包含更多的HTML結構，例如圖片、表格等。</p>
+</div>
+<div id="tab4" class="content hidden">
+    <h1>標籤4內容</h1>
+    <!-- 這裡插入您的標籤4內容 -->
+    <p>這是標籤4的內容。這裡可以包含更多的HTML結構，例如圖片、表格等。</p>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>

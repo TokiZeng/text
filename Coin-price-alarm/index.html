@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-7059374528043602">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7059374528043602" crossorigin="anonymous"></script>
+    <title>幣價漲跌警報器</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDLVH7VQHN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MDLVH7VQHN');
+    </script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>幣價漲跌警報器</h1>
+        <div class="header">
+            <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png" alt="BTC">
+            <span>Exclusively for BTC & ETH</span>
+            <img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png" alt="ETH">
+        </div>
+        <p>交易對： 
+            <select id="symbol">
+                <option value="BTCUSDT">BTCUSDT</option>
+                <option value="ETHUSDT">ETHUSDT</option>
+            </select>
+        </p>
+        <p>閾值類型：
+            <select id="thresholdType">
+                <option value="percent">百分比</option>
+                <option value="value">價格變動值</option>
+                <option value="targetPrice">目標價格</option>
+            </select>
+        </p>
+        <p>閾值：<input type="number" id="thresholdInput" value="0.2" step="0.01" min="0.01"/></p>
+        <p>警報類型：
+            <select id="alertType">
+                <option value="both">漲跌都警報</option>
+                <option value="rise">漲幅警報</option>
+                <option value="fall">跌幅警報</option>
+            </select>
+        </p>
+        <p>當前價格：<span id="currentPrice" class="price-neutral">-</span></p>
+        <p>價格變化：<span id="priceChange" class="price-neutral">-</span></p>
+        <p>前一分鐘價格：<span id="previousMinutePrice" class="price-neutral">-</span></p>
+        <p>兩分鐘前的價格：<span id="twoMinutesAgoPrice" class="price-neutral">-</span></p>
+        <p>當日最高價：<span id="highPrice" class="price-neutral">-</span></p>
+        <p>當日最低價：<span id="lowPrice" class="price-neutral">-</span></p>
+        <p id="alert"></p>
+        <audio id="alertSound" src="bbb.mp3" preload="auto"></audio>
+        <div class="donation">
+            <p>小額捐款 使用幣安鏈(BEP20) 感謝您的捐款</p>
+            <p>地址 0x75b08718e7baa818a4e3c6cfbf059335f1d9f275</p>
+            <p>支持BTC、ETH、USDT、BNB等等幣種</p>
+        </div>
+        <div class="footer">
+            <p>Copyright © 2024 熔爐 FORGE THE MAKER 版權所有</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
